@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+Project Overview:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Course Enrollment System Frontend is a React.js based web application that allows users to view available courses, create and edit courses, and enroll students in courses. This frontend application communicates with a Spring Boot backend using REST APIs.
 
-## Available Scripts
+The main goal of this project is to provide a clean and user-friendly interface for managing course enrollments in a full-stack environment.
 
-In the project directory, you can run:
+ Features :
 
-### `npm start`
+View list of available courses
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Create new courses
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Edit existing course details
 
-### `npm test`
+Enroll a student in a course
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Dynamic data loading from backend APIs
 
-### `npm run build`
+Proper loading and error handling
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Technologies Used :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+React.js
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+JavaScript (ES6)
 
-### `npm run eject`
+HTML & CSS
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Fetch API
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Environment Variables (REACT_APP_API_URL)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+ API Integration:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The frontend consumes REST APIs provided by the Spring Boot backend.
 
-## Learn More
+Example endpoints:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+GET /api/courses – Fetch all courses
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+POST /api/courses – Create a new course
 
-### Code Splitting
+PUT /api/courses/{id} – Update course details
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+POST /api/enrollments – Enroll a student in a course
 
-### Analyzing the Bundle Size
+The backend base URL is configured using environment variables for flexibility across environments.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+ Deployment:
 
-### Making a Progressive Web App
+Frontend: Deployed on Vercel
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Backend: Deployed on Render
 
-### Advanced Configuration
+The frontend automatically connects to the deployed backend using the configured API base URL.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Error Handling:
 
-### Deployment
+Prevents application crashes by validating API responses
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Displays meaningful error messages when API calls fail
 
-### `npm run build` fails to minify
+Handles loading states during data fetch operations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ Conclusion:
+
+This frontend project demonstrates:
+
+React component design using hooks
+
+API integration in a real-world application
+
+Full-stack connectivity with a Spring Boot backend
+
+Cloud deployment using Vercel
