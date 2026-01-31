@@ -18,12 +18,15 @@ jobs:
       - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
+          distribution: 'temurin'
           java-version: '17'
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v2
         with:
-          organization: hemavathypandiarajan
-          token: ${{ secrets.SONAR_TOKEN }} 
+          organization: hemavathy-p
+          token: ${{ secrets.SONAR_TOKEN }}
           projectKey: Hemavathypandiarajan_CourseFront
           projectName: CourseFront
+          extra-properties: |
+            sonar.sourceEncoding=UTF-8
